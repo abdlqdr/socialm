@@ -1,1 +1,1 @@
-web: gunicorn djano-project.wsgi --log-file
+web: gunicorn djano-project.wsgi --log-file -
