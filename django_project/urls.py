@@ -39,7 +39,7 @@ urlpatterns = [
     path('profile/', users_views.profile, name='profile'),
     path('search/', users_views.SearchView, name='search'),
     path('', include('blog.urls')),
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
